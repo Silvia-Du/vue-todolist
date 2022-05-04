@@ -18,7 +18,7 @@ const app = new Vue({
   el: '#app',
 
   data: {
-    listItems : [
+    todoList : [
       {
         text: 'Fare la spesa',
         done: false
@@ -29,12 +29,14 @@ const app = new Vue({
       },
       {
         text: 'Controllare ultimo esercizio consegnato',
-        done: false
+        done: true
       },
       {
         text: 'Preparare la cena',
         done: false
       }
     ]
+ 
+
   }
 })

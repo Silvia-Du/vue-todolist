@@ -25,16 +25,11 @@
 
         <div class="list-container">
           <ul>
-            <li>
-              ciaone
-              <i class="fa-solid fa-x"></i>
-            </li>
-            <li>
-              ciaone
-              <i class="fa-solid fa-x"></i>
-            </li><li>
-              ciaone
-              <i class="fa-solid fa-x"></i>
+            <li v-for = "todo in todoList" :class="{'delate': todo.done}">
+              {{todo.text}}
+              <div class="x-container">
+                <i class="fa-solid fa-x"></i>
+              </div>
             </li>
           </ul>
         </div>

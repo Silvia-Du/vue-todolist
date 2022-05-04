@@ -59,9 +59,9 @@ const app = new Vue({
       if(this.newItems.length > 2){
         this.todoList.push(pushableTodo);
         this.newItems ='';
-      }
-      
-    }
+      }  
+    },
+
 
   }
 

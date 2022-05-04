@@ -20,7 +20,7 @@
 
         <h1>Vue To do list</h1>
 
-        <input type="text" v-model ="newItems">
+        <input type="text" v-model ="newItems" @keyup.enter ="getNewItems()">
         <div @click="getNewItems()" class="button">Aggiungi</div>
 
         <div class="list-container">

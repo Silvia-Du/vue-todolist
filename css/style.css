@@ -80,6 +80,14 @@ h1{
 
 }
 
+.list-container ul li span{
+  cursor: pointer;
+}
+
 .delate{
   text-decoration: line-through;
+}
+
+.list-container ul li:hover{
+  background-color: rgb(207, 200, 220);
 }

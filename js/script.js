@@ -36,7 +36,9 @@ const app = new Vue({
         text: 'Preparare la cena',
         done: false
       }
-    ]
+    ],
+
+    newItems : '',
   },
 
   methods:{
@@ -44,6 +46,21 @@ const app = new Vue({
     delateItems(index){
       console.log(index);
       this.todoList.splice(index, 1);
+    },
+
+    getNewItems(){
+
+      const pushableTodo = {
+        text: '',
+        done: false
+      }
+      pushableTodo.text = this.newItems;
+
+      if(this.newItems.length > 2){
+        this.todoList.push(pushableTodo);
+        this.newItems ='';
+      }
+      
     }
 
   }

@@ -20,8 +20,8 @@
 
         <h1>Vue To do list</h1>
 
-        <input type="text" placeholder="ciao">
-        <div class="button">Aggiungi</div>
+        <input type="text" v-model ="newItems">
+        <div @click="getNewItems()" class="button">Aggiungi</div>
 
         <div class="list-container">
           <ul>

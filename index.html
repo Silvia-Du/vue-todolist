@@ -25,10 +25,10 @@
 
         <div class="list-container">
           <ul>
-            <li v-for = "todo in todoList" :class="{'delate': todo.done}">
+            <li v-for = "(todo, index) in todoList" :class="{'delate': todo.done}">
               {{todo.text}}
               <div class="x-container">
-                <i class="fa-solid fa-x"></i>
+                <i @click="delateItems(index)" class="fa-solid fa-x"></i>
               </div>
             </li>
           </ul>

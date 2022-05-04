@@ -18,6 +18,7 @@ const app = new Vue({
   el: '#app',
 
   data: {
+
     todoList : [
       {
         text: 'Fare la spesa',
@@ -36,7 +37,15 @@ const app = new Vue({
         done: false
       }
     ]
- 
+  },
+
+  methods:{
+
+    delateItems(index){
+      console.log(index);
+      this.todoList.splice(index, 1);
+    }
 
   }
+
 })

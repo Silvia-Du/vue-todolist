@@ -18,6 +18,23 @@ const app = new Vue({
   el: '#app',
 
   data: {
-    messaggio: 'ciao',
+    listItems : [
+      {
+        text: 'Fare la spesa',
+        done: false
+      },
+      {
+        text: 'Ripassare argomenti vecchi',
+        done: false
+      },
+      {
+        text: 'Controllare ultimo esercizio consegnato',
+        done: false
+      },
+      {
+        text: 'Preparare la cena',
+        done: false
+      }
+    ]
   }
 })

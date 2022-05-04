@@ -20,19 +20,31 @@
 
         <h1>Vue To do list</h1>
 
-        <input type="text" v-model ="newItems" @keyup.enter ="getNewItems()">
+        <input type="text" v-model.trim ="newItems" @keyup.enter ="getNewItems()" placeholder="new item">
         <div @click="getNewItems()" class="button">Aggiungi</div>
 
         <div class="list-container">
-          <ul>
+          <ul v-if="todoList.length > 0">
+
             <li v-for = "(todo, index) in todoList" :class="{'delate': todo.done}">
-              <span @click="todo.done = !todo.done">{{todo.text}}</span>
+              <span @click="todo.done = !todo.done">
+                {{todo.text}}
+              </span>
               <div class="x-container">
                 <i @click="delateItems(index)" class="fa-solid fa-x"></i>
               </div>
             </li>
           </ul>
+          <h2 v-else >La tua lista è vuota! aggiungi un promemoria</h2>
         </div>
+        <div v-if="checkDelate" class="modal-container">
+          <div class="modal">
+            <h2>Sei sicuro di voler cancellare il promemoria?</h2>
+            <div @click="doubleCheck()" class="button">Cancella</div>
+            <div @click="checkDelate = !checkDelate" class="button">Annulla</div>
+          </div>
+        </div>
+        
       </div>
     </main>
   </div>
